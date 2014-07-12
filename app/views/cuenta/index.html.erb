@@ -1,0 +1,35 @@
+<h1>Listing cuenta</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cuenta</th>
+      <th>Descripcion</th>
+      <th>Detalle</th>
+      <th>Inicio</th>
+      <th>Fin</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cuenta.each do |cuentum| %>
+      <tr>
+        <td><%= cuentum.cuenta %></td>
+        <td><%= cuentum.descripcion %></td>
+        <td><%= cuentum.detalle %></td>
+        <td><%= cuentum.inicio %></td>
+        <td><%= cuentum.fin %></td>
+        <td><%= link_to 'Show', cuentum %></td>
+        <td><%= link_to 'Edit', edit_cuentum_path(cuentum) %></td>
+        <td><%= link_to 'Destroy', cuentum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cuentum', new_cuentum_path %>

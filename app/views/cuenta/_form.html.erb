@@ -1,0 +1,37 @@
+<%= form_for(@cuentum) do |f| %>
+  <% if @cuentum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cuentum.errors.count, "error") %> prohibited this cuentum from being saved:</h2>
+
+      <ul>
+      <% @cuentum.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cuenta %><br>
+    <%= f.text_field :cuenta %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_field :descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :detalle %><br>
+    <%= f.text_area :detalle %>
+  </div>
+  <div class="field">
+    <%= f.label :inicio %><br>
+    <%= f.date_select :inicio %>
+  </div>
+  <div class="field">
+    <%= f.label :fin %><br>
+    <%= f.date_select :fin %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

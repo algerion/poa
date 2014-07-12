@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cuenta:</strong>
+  <%= @cuentum.cuenta %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @cuentum.descripcion %>
+</p>
+
+<p>
+  <strong>Detalle:</strong>
+  <%= @cuentum.detalle %>
+</p>
+
+<p>
+  <strong>Inicio:</strong>
+  <%= @cuentum.inicio %>
+</p>
+
+<p>
+  <strong>Fin:</strong>
+  <%= @cuentum.fin %>
+</p>
+
+<%= link_to 'Edit', edit_cuentum_path(@cuentum) %> |
+<%= link_to 'Back', cuenta_path %>
